@@ -222,3 +222,13 @@ function handleFavouriteMovie(event, data) {
     displayFavResults(favouriteMovies);
 }
 
+document.getElementById("clearButton").addEventListener("click", clearData);
+function clearData() {
+    localStorage.setItem('favouriteMovies', JSON.stringify([]));
+    localStorage.setItem('results', JSON.stringify([]));
+    window.location.href = "index.html";
+    document.getElementById("searchInput").value = "";
+    favouriteMovies = [];
+    displaySearchResults([]);
+    displayFavResults([]);
+}

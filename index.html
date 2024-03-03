@@ -13,7 +13,17 @@
 
 <body data-bs-theme="dark">
     <div class="container mt-1 fixed-top">
-        <h1 class="text-center my-1">CineCritic</h1>
+        <div class="container d-flex justify-content-between align-items-center my-2">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch" data-size="xl">
+            </div>
+            <h1 class="text-center">CineCritic</h1>
+
+
+            <button class="btn btn-primary col-auto" id="clearButton">Clear Data</button>
+
+        </div>
+
         <nav class="navbar bg-body-tertiary rounded navbar-top">
             <div class="container-fluid justify-content-between ">
                 <div class="col-md-4 py-1">
@@ -28,18 +38,19 @@
         </nav>
     </div>
 
-    <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch" data-size="xl">
-    </div>
+
 
 
     <div class="container fixed-top" id="content">
-        <div class="container mt-5">
+        <div class="container mt-3">
             <div class="row" id="listMovies">
                 <!-- Favourite Movies and Search Results are listed here -->
             </div>
         </div>
     </div>
+
+
+
     <script src="./js/script.js" type="module">
         function handleImageError(img) {
             img.src = "./placeholder.png";
