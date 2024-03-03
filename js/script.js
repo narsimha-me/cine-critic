@@ -14,7 +14,7 @@ async function fetchMovieData(query) {
     try {
         response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=39dc70e`);
     } catch {
-        console.log("Error");
+        
     }
 
     let data = await response.json();
@@ -135,7 +135,6 @@ async function handleSearchResults(event) {
             results = await fetchMovieData(query);
         }
         catch {
-            console.log("Error");
         }
         results.forEach(movie => {
             favouriteMovies.forEach(favMovie => {
