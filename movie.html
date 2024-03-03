@@ -9,27 +9,29 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <style>
-    #darkModeSwitch {
+    /* #darkModeSwitch {
         position: fixed;
         top: 2rem;
         left: 6rem;
-        /* cursor: pointer; */
-    }
+
+    } */
 </style>
 
 <body>
 
-    <div class="container mt-5">
-        <div class="container d-flex justify-content-end align-items-center">
+    <div class="container mt-3">
+        <div class="container d-flex justify-content-between align-items-center my-2">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch" data-size="xl">
+            </div>
             <button class="btn btn-primary col-auto" onclick="goBack()">Back</button>
         </div>
+
         <div class="row" id="movieDetails">
 
 
         </div>
-        <div class="form-check form-switch">
-            <input class="form-check-input float-left mt-1 mr-1" type="checkbox" role="switch" id="darkModeSwitch">
-        </div>
+
     </div>
     <script src="./js/movie.js">
 
