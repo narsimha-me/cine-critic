@@ -12,7 +12,7 @@ const defaultTheme = "dark";
 async function fetchMovieData(query) {
     let response = []
     try {
-        response = await fetch(`http://www.omdbapi.com/?s=${query}&apikey=39dc70e`);
+        response = await fetch(`https://www.omdbapi.com/?s=${query}&apikey=39dc70e`);
     } catch {
         console.log("Error");
     }

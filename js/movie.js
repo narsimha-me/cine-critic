@@ -1,6 +1,6 @@
 // Function to fetch movie details from Omdb API by ID
 async function fetchMovieDetails(id) {
-    const response = await fetch(`http://www.omdbapi.com/?i=${id}&apikey=39dc70e`);
+    const response = await fetch(`https://www.omdbapi.com/?i=${id}&apikey=39dc70e`);
     const data = await response.json();
     return data;
 }
